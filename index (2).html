@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Andino | Restaurante de cocina tradicional</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a href="#inicio" class="logo">
+      <img src="img/logo.svg" alt="Logo de Café Andino" width="40" height="40">
+      Café Andino
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+
+    <nav id="menu-principal" class="menu-nav" aria-label="Menú principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#platos">Platos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <h1>Sabores de la montaña</h1>
+      <p>Cocina tradicional colombiana con ingredientes frescos de la región.</p>
+      <a href="#reservas" class="btn">Reservar mesa</a>
+    </section>
+
+    <section id="platos" class="seccion">
+      <h2>Nuestros platos</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="icono" aria-hidden="true">🍲</span>
+          <h3>Sancocho de gallina</h3>
+          <p>Caldo casero con papa, yuca, plátano y mazorca.</p>
+          <span class="precio">$28.000</span>
+        </article>
+
+        <article class="tarjeta">
+          <span class="icono" aria-hidden="true">🫓</span>
+          <h3>Arepa paisa</h3>
+          <p>Arepa de maíz asada, servida con queso fresco y mantequilla.</p>
+          <span class="precio">$12.000</span>
+        </article>
+
+        <article class="tarjeta">
+          <span class="icono" aria-hidden="true">🥘</span>
+          <h3>Bandeja andina</h3>
+          <p>Frijoles, arroz, chicharrón, huevo frito y aguacate.</p>
+          <span class="precio">$35.000</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="nosotros" class="seccion historia">
+      <h2>Nosotros</h2>
+      <details>
+        <summary>Nuestra historia</summary>
+        <p>Café Andino nació en 2010 como una cocina familiar y hoy reúne recetas heredadas de generación en generación.</p>
+      </details>
+      <details>
+        <summary>Nuestro compromiso</summary>
+        <p>Compramos a productores locales y priorizamos ingredientes de temporada para reducir el impacto ambiental.</p>
+      </details>
+    </section>
+
+    <section id="reservas" class="seccion">
+      <h2>Reserva tu mesa</h2>
+      <form id="form-reserva" novalidate>
+        <label>
+          Nombre
+          <input type="text" id="nombre" required>
+        </label>
+        <label>
+          Correo electrónico
+          <input type="email" id="correo" required>
+        </label>
+        <label>
+          Fecha
+          <input type="date" id="fecha" required>
+        </label>
+        <label>
+          Número de personas
+          <select id="personas">
+            <option value="1">1 persona</option>
+            <option value="2" selected>2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5 o más</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Enviar reserva</button>
+        <p id="mensaje" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Café Andino · Calle 10 # 5-20 · Tel. 300 000 0000</p>
+    <p>&copy; 2026 Café Andino. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
